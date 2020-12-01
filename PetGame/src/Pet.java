@@ -95,7 +95,7 @@ abstract class Pet {
     }
 
     public String feed(String food){
-        String mess = getName() + ": " + getSound();
+        String mess = "\n" + getName() + ": " + getSound() + "\n";
         if(isAsleep()){
             mess = "You woke " + getName() + " up!\n" + mess;
             wakeUp();
@@ -109,7 +109,7 @@ abstract class Pet {
     }
 
     public String play(){
-        String mess = getName() + ": " + getSound();
+        String mess = "\n" + getName() + ": " + getSound() + "\n";
         if(isAsleep()){
             mess = "You woke " + getName() + " up!\n" + mess;
             wakeUp();
@@ -121,9 +121,9 @@ abstract class Pet {
     }
 
     public String sleep(){
-        String message = getName() + ": zzz";
+        String mess = "\n" + getName() + ": " + getSound() + "\n";
         asleep = true;
-        return message;
+        return mess;
     }
 
     public String wakeUp(){

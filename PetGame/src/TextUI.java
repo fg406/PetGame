@@ -48,6 +48,7 @@ public class TextUI implements Out{
         for(int i = 0; i < options.size(); i++){
             mess += i + ") " + options.get(i).substring(0,1).toUpperCase() + options.get(i).substring(1).toLowerCase() + "\n";
         }
+        mess = mess.substring(0, mess.length()-1);
         outputMessage(mess);
     }
 
